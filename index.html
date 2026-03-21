@@ -437,6 +437,15 @@
     font-family: 'Space Mono', monospace;
     letter-spacing: 1px;
   }
+
+  /* ── CONTACT FORM ── */
+  .contact-form-wrap { max-width:480px; margin:16px auto 0; padding:0 24px; }
+  .contact-form { display:flex; flex-direction:column; gap:12px; }
+  .form-input { background:var(--dark); border:1px solid #2a2a2a; border-radius:6px; padding:14px 16px; color:var(--white); font-family:'DM Sans',sans-serif; font-size:.95rem; width:100%; transition:border-color .2s; outline:none; }
+  .form-input:focus { border-color:var(--yellow); }
+  .form-input::placeholder { color:#555; }
+  .form-textarea { resize:vertical; min-height:100px; }
+  .form-success { text-align:center; color:var(--yellow); font-family:'Space Mono',monospace; font-size:.75rem; margin-top:8px; letter-spacing:1px; }
 </style>
 </head>
 <body>
@@ -543,6 +552,22 @@
   </a>
 </div>
 
+
+<!-- ── CONTACT FORM ── -->
+<div class="section-divider" style="margin-top:40px;">
+  <div class="section-label">✉️ napiš mi</div>
+  <div class="section-title">POŠLI ZPRÁVU</div>
+</div>
+<div class="contact-form-wrap">
+  <form action="https://formspree.io/f/jan.honza.ambroz@gmail.com" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Tvoje jméno" required class="form-input">
+    <input type="email" name="email" placeholder="Tvůj e-mail" required class="form-input">
+    <textarea name="message" placeholder="Tvoje zpráva..." rows="4" required class="form-input form-textarea"></textarea>
+    <input type="hidden" name="_subject" value="Nová zpráva z eezyinglis.github.io">
+    <button type="submit" class="btn-primary" style="animation:none; margin-top:4px;">📨 &nbsp;ODESLAT ZPRÁVU</button>
+  </form>
+</div>
+
 <!-- ── SOCIALS ── -->
 <div class="socials">
   <a href="https://www.instagram.com/eezy_inglis/" class="social-link">
@@ -553,7 +578,7 @@
     <div class="social-icon">🎵</div>
     <span>TikTok</span>
   </a>
-  <a href="mailto:eezy_inglis@gmail.com" class="social-link">
+  <a href="mailto:jan.honza.ambroz@gmail.com" class="social-link">
     <div class="social-icon">✉️</div>
     <span>Email</span>
   </a>
