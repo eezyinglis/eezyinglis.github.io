@@ -466,6 +466,278 @@
     color: var(--black);
   }
   .form-success { text-align:center; color:var(--yellow); font-family:'Space Mono',monospace; font-size:.75rem; margin-top:8px; letter-spacing:1px; }
+
+
+  /* ── PRICING (rebuilt) ── */
+  .pricing-wrap {
+    max-width: 480px;
+    margin: 20px auto 0;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pricing-card {
+    background: var(--dark);
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 18px 18px 14px;
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    position: relative;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,230,0,0.5);
+    box-shadow: 0 8px 30px rgba(255,230,0,0.1);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--yellow);
+    box-shadow: 0 4px 24px rgba(255,230,0,0.18);
+  }
+
+  .pricing-badge {
+    position: absolute;
+    top: 0; right: 0;
+    background: var(--yellow);
+    color: var(--black);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 0 12px 0 8px;
+    text-transform: uppercase;
+  }
+
+  .pricing-badge.white {
+    background: #fff;
+  }
+
+  .pricing-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 10px;
+    padding-right: 80px;
+  }
+
+  .pricing-prices {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .pricing-original {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    text-decoration: line-through;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .pricing-czk {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--yellow);
+    line-height: 1;
+  }
+
+  .pricing-save {
+    display: inline-block;
+    margin-top: 7px;
+    background: rgba(255,230,0,0.1);
+    border: 1px solid rgba(255,230,0,0.3);
+    color: var(--yellow);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 3px;
+  }
+
+  .pricing-desc {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .pricing-cta-btn {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 11px 16px;
+    background: transparent;
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .pricing-card.featured .pricing-cta-btn {
+    background: var(--yellow);
+    color: var(--black);
+  }
+
+  .pricing-card:hover .pricing-cta-btn {
+    background: var(--yellow);
+    color: var(--black);
+  }
+
+  /* ── HORIZONTAL SCROLL RESOURCES ── */
+  .resources-scroll-wrap {
+    max-width: 480px;
+    margin: 16px auto 0;
+    padding: 0 0 12px 24px;
+    overflow: visible;
+  }
+
+  .resources-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .resources-scroll::-webkit-scrollbar { display: none; }
+
+  .resource-card-h {
+    background: var(--dark);
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    min-width: 200px;
+    max-width: 200px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-decoration: none;
+    scroll-snap-align: start;
+    transition: border-color 0.2s, transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .resource-card-h:hover {
+    border-color: var(--yellow);
+    transform: translateY(-2px);
+  }
+
+  .resource-card-h .resource-emoji {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .resource-card-h .resource-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.05rem;
+    color: var(--white);
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .resource-card-h .resource-desc {
+    font-size: 0.72rem;
+    color: #666;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .resource-card-h .resource-btn-h {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    color: var(--yellow);
+    background: rgba(255,230,0,0.08);
+    border: 1px solid rgba(255,230,0,0.4);
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 3px;
+    transition: background 0.15s;
+    align-self: flex-start;
+  }
+
+  .resource-card-h:hover .resource-btn-h {
+    background: var(--yellow);
+    color: var(--black);
+  }
+
+  .scroll-hint {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    color: #444;
+    text-align: right;
+    padding-right: 24px;
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+
+
+  /* ── NOTICE BANNER ── */
+  .notice-banner {
+    max-width: 480px;
+    margin: 16px auto 0;
+    padding: 0 24px;
+  }
+
+  .notice-inner {
+    background: rgba(255, 140, 0, 0.08);
+    border: 1px solid rgba(255, 140, 0, 0.4);
+    border-left: 3px solid #ff8c00;
+    border-radius: 6px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .notice-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .notice-text {
+    flex: 1;
+  }
+
+  .notice-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #ff8c00;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .notice-body {
+    font-size: 0.82rem;
+    color: #bbb;
+    line-height: 1.5;
+  }
+
+  .notice-body strong {
+    color: #ddd;
+    font-weight: 600;
+  }
 </style>
 </head>
 <body>
@@ -485,9 +757,66 @@
 
 <!-- ── PRIMARY CTA ── -->
 <div class="cta-wrap">
-  <a href="https://calendly.com/eezy_inglis/english-konverzace" class="btn-primary">
+  <a href="https://calendly.com/eezy_inglis" class="btn-primary">
     🗓 &nbsp;ZAMLUV SI LEKCI
   </a>
+</div>
+
+<!-- ── NOTICE ── -->
+<div class="notice-banner">
+  <div class="notice-inner">
+    <div class="notice-icon">✈️</div>
+    <div class="notice-text">
+      <div class="notice-title">Důležitá informace</div>
+      <div class="notice-body">
+        Od <strong>5. května do 30. září 2026</strong> budu v zahraničí — lekce budou v tomto období pozastaveny nebo výrazně omezeny.<br><br>
+        Hodiny z balíčků <strong>nevyprší</strong> — využiješ je i po návratu. 🙌
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PRICING ── -->
+<div class="section-divider" style="margin-top: 32px;">
+  <div class="section-label">💰 vyber si balíček</div>
+  <div class="section-title">CENY A BALÍČKY</div>
+</div>
+
+<div class="pricing-wrap">
+
+  <a href="https://calendly.com/eezy_inglis/english-konverzace" class="pricing-card">
+    <div class="pricing-name">1 LEKCE ANGLIČTINY</div>
+    <div class="pricing-prices">
+      <span class="pricing-czk">417 Kč</span>
+    </div>
+    <div class="pricing-desc">55 minut 1:1 výuky šité na míru. Ideální pro první vyzkoušení bez závazku.</div>
+    <span class="pricing-cta-btn">ZAMLUVIT →</span>
+  </a>
+
+  <a href="https://calendly.com/eezy_inglis/packages/52d75987-7566-4dc5-a813-8809710befed" class="pricing-card featured">
+    <div class="pricing-badge">⭐ Oblíbený</div>
+    <div class="pricing-name">5 LEKCÍ ANGLIČTINY</div>
+    <div class="pricing-prices">
+      <span class="pricing-original">2 085 Kč</span>
+      <span class="pricing-czk">1 839 Kč</span>
+    </div>
+    <span class="pricing-save">✂ UŠETŘÍŠ 246 Kč</span>
+    <div class="pricing-desc">5× 55 min výuky šité na míru tvým potřebám. Ideální pro první výsledky.</div>
+    <span class="pricing-cta-btn">ZAMLUVIT BALÍČEK →</span>
+  </a>
+
+  <a href="https://calendly.com/eezy_inglis/packages/d93388a5-fada-4956-9d04-e5d868da61fc" class="pricing-card">
+    <div class="pricing-badge white">🏆 Nejlepší hodnota</div>
+    <div class="pricing-name">10 LEKCÍ ANGLIČTINY</div>
+    <div class="pricing-prices">
+      <span class="pricing-original">4 170 Kč</span>
+      <span class="pricing-czk">3 433 Kč</span>
+    </div>
+    <span class="pricing-save">✂ UŠETŘÍŠ 737 Kč</span>
+    <div class="pricing-desc">10× 55 min výuky šité na míru. Balíček na který přechází většina studentů po první lekci.</div>
+    <span class="pricing-cta-btn">ZAMLUVIT BALÍČEK →</span>
+  </a>
+
 </div>
 
 <!-- ── SOCIAL PROOF ── -->
@@ -499,20 +828,21 @@
 <div class="testimonials">
   <div class="testimonial">
     <div class="stars">★★★★★</div>
-    <p>„Po 3 měsících jsem složil Cambridge B2 na první pokus!"</p>
+    <p>„Složil jsem Cambridge B2 na první pokus. Nečekal jsem to tak rychle."</p>
     <span>— TOMÁŠ, 24</span>
   </div>
   <div class="testimonial">
     <div class="stars">★★★★★</div>
-    <p>„Honza vysvětluje gramatiku líp než školní učitelé. Konečně mi to dává smysl."</p>
+    <p>„Konečně mi to dává smysl. Honza vysvětluje věci jinak než ve škole."</p>
     <span>— ELIŠKA, 19</span>
   </div>
   <div class="testimonial">
     <div class="stars">★★★★★</div>
-    <p>„Konečně mluvím anglicky bez studu. Doporučuju každému, kdo chce posunout level."</p>
+    <p>„Přestal jsem se bát mluvit. Po pár lekcích jsem si začal věřit mnohem víc."</p>
     <span>— MAREK, 31</span>
   </div>
 </div>
+
 
 <!-- ── VIDEO ── -->
 <div class="section-divider" style="margin-top: 40px;">
@@ -526,6 +856,41 @@
       title="Kdo jsem a jak vypadá lekce s eezyinglis"></iframe>
   </div>
   <div class="video-caption">Kdo jsem a jak vypadá lekce?</div>
+</div>
+
+
+<!-- ── FREE RESOURCES ── -->
+<div class="section-divider" style="margin-top: 40px;">
+  <div class="section-label">⚡ pro tebe zdarma</div>
+  <div class="section-title">ZDARMA KE STAŽENÍ</div>
+</div>
+
+<div class="resources-scroll-wrap">
+  <div class="resources-scroll">
+
+    <a href="https://shop.beacons.ai/eezyinglis/8c3cf448-275e-4111-9d32-067b83acde4e" class="resource-card-h">
+      <div class="resource-emoji">🎓</div>
+      <div class="resource-title">NÁVOD NA CAMBRIDGE</div>
+      <div class="resource-desc">Jak složit Cambridge zkoušku krok za krokem</div>
+      <span class="resource-btn-h">ZDARMA →</span>
+    </a>
+
+    <a href="https://shop.beacons.ai/eezyinglis/13f721d2-0ebc-4751-b568-6dd5694d231e" class="resource-card-h">
+      <div class="resource-emoji">🖼</div>
+      <div class="resource-title">JAK POPSAT OBRÁZEK?</div>
+      <div class="resource-desc">Perfektní technika pro Cambridge speaking</div>
+      <span class="resource-btn-h">ZDARMA →</span>
+    </a>
+
+    <a href="https://shop.beacons.ai/eezyinglis/b5d39df6-c8bd-4f5b-9ff9-c6ade7e43d06" class="resource-card-h">
+      <div class="resource-emoji">📋</div>
+      <div class="resource-title">120+ ENG SPOJEK</div>
+      <div class="resource-desc">Slovní zásoba pro plynulý a přirozený projev</div>
+      <span class="resource-btn-h">ZDARMA →</span>
+    </a>
+
+  </div>
+  <div class="scroll-hint">swipe → </div>
 </div>
 
 <!-- ── CONTACT FORM ── -->
@@ -543,50 +908,15 @@
   </form>
 </div>
 
-<!-- ── FREE RESOURCES ── -->
-<div class="section-divider" style="margin-top: 40px;">
-  <div class="section-label">⚡ zdarma ke stažení</div>
-  <div class="section-title">CO DOSTANEŠ ZDARMA</div>
-</div>
-
-<div class="resources">
-  <a href="https://shop.beacons.ai/eezyinglis/8c3cf448-275e-4111-9d32-067b83acde4e" class="resource-card">
-    <div class="resource-thumb">🎓</div>
-    <div class="resource-info">
-      <div class="resource-title">NÁVOD na CAMBRIDGE</div>
-      <div class="resource-desc">Jak složit Cambridge zkoušku krok za krokem</div>
-      <span class="resource-btn">ZDARMA →</span>
-    </div>
-  </a>
-
-  <a href="https://shop.beacons.ai/eezyinglis/13f721d2-0ebc-4751-b568-6dd5694d231e" class="resource-card">
-    <div class="resource-thumb">🖼</div>
-    <div class="resource-info">
-      <div class="resource-title">Jak popsat obrázek?</div>
-      <div class="resource-desc">Perfektní technika pro Cambridge speaking</div>
-      <span class="resource-btn">ZDARMA →</span>
-    </div>
-  </a>
-
-  <a href="https://shop.beacons.ai/eezyinglis/b5d39df6-c8bd-4f5b-9ff9-c6ade7e43d06" class="resource-card">
-    <div class="resource-thumb">📋</div>
-    <div class="resource-info">
-      <div class="resource-title">120+ ENG spojek</div>
-      <div class="resource-desc">Slovní zásoba pro plynulý a přirozený projev</div>
-      <span class="resource-btn">ZDARMA →</span>
-    </div>
-  </a>
-</div>
 
 <!-- ── FINAL CTA ── -->
 <div class="final-cta">
   <div class="urgency">⏳ Volná místa jsou omezená</div>
   <div class="section-title">ZAČNI DNES.</div>
-  <a href="https://calendly.com/eezy_inglis/english-konverzace" class="btn-primary" style="margin-top: 4px;">
+  <a href="https://calendly.com/eezy_inglis" class="btn-primary" style="margin-top: 4px; animation: none;">
     🗓 &nbsp;ZAMLUV SI LEKCI TEĎ
   </a>
 </div>
-
 
 <!-- ── SOCIALS ── -->
 <div class="socials">
@@ -598,17 +928,13 @@
     <div class="social-icon">🎵</div>
     <span>TikTok</span>
   </a>
-  <a href="mailto:jan.honza.ambroz@gmail.com" class="social-link">
+  <a href="/cdn-cgi/l/email-protection#b4ded5da9adcdbdaced59ad5d9d6c6dbcef4d3d9d5ddd89ad7dbd9" class="social-link">
     <div class="social-icon">✉️</div>
     <span>Email</span>
   </a>
 </div>
 
+
 <!-- ── FOOTER ── -->
 <footer>
-  <p>© 2025 eezyinglis &nbsp;·&nbsp; Angličtina pro Čechy a Slováky</p>
-</footer>
-
-
-</body>
-</html>
+  <p>© 2025 eezyinglis &nbsp;·&nbsp; Angličtina Pro Všechny
