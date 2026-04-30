@@ -738,6 +738,167 @@
     color: #ddd;
     font-weight: 600;
   }
+
+  /* ── DIGITAL COURSE ── */
+  .course-section {
+    max-width: 480px;
+    margin: 32px auto 0;
+    padding: 0 24px;
+  }
+
+  .course-card {
+    background: linear-gradient(145deg, #1a1400 0%, #111 100%);
+    border: 1.5px solid var(--yellow);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(255,230,0,0.18);
+  }
+
+  .course-top-badge {
+    background: var(--yellow);
+    padding: 6px 0;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d0d0d;
+  }
+
+  .course-inner {
+    padding: 22px 20px 20px;
+  }
+
+  .course-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .course-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .course-title span {
+    color: var(--yellow);
+  }
+
+  .course-desc {
+    font-size: 0.88rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .course-what {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .course-what-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #ddd;
+    line-height: 1.4;
+  }
+
+  .course-what-item::before {
+    content: '✓';
+    color: var(--yellow);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .course-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .course-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.6rem;
+    color: var(--yellow);
+    line-height: 1;
+  }
+
+  .course-price-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: #666;
+    letter-spacing: 1px;
+  }
+
+  .course-price-note {
+    font-size: 0.78rem;
+    color: #888;
+    font-style: italic;
+  }
+
+  .btn-course {
+    display: block;
+    width: 100%;
+    padding: 17px 24px;
+    background: var(--yellow);
+    color: #0d0d0d;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 24px rgba(255,230,0,0.35);
+    margin-bottom: 12px;
+  }
+
+  .btn-course:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 36px rgba(255,230,0,0.55);
+  }
+
+  .course-guarantee {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    color: #555;
+    letter-spacing: 1px;
+  }
+
+  .course-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .course-pill {
+    background: rgba(255,230,0,0.08);
+    border: 1px solid rgba(255,230,0,0.25);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--yellow);
+    letter-spacing: 1px;
+  }
+
 </style>
 </head>
 <body>
@@ -769,12 +930,68 @@
     <div class="notice-text">
       <div class="notice-title">Důležitá informace</div>
       <div class="notice-body">
-        Od <strong>5. května do 30. září 2026</strong> budu v zahraničí — lekce budou v tomto období pozastaveny nebo výrazně omezeny.<br><br>
-        Hodiny z balíčků <strong>nevyprší</strong> — využiješ je i po návratu. 🙌
+        Od <strong>5. května do 30. září 2026</strong> budu v zahraničí — lekce budou pozastaveny.<br><br>
+        Nechceš čekat? <strong>Videokurz Z B1 na C2</strong> je dostupný ihned — vlastním tempem, okamžitý přístup.
       </div>
     </div>
   </div>
 </div>
+
+<!-- ── DIGITAL COURSE ── -->
+<div class="course-section">
+
+  <!-- Trailer video -->
+  <div style="border-radius:12px 12px 0 0;overflow:hidden;position:relative;padding-top:56.25%;">
+    <iframe
+      src="https://www.youtube.com/embed/iSyAzA7wwps?rel=0&modestbranding=1"
+      title="Z B1 na C2: Systém který funguje — Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;">
+    </iframe>
+  </div>
+
+
+  <div class="course-card" style="border-radius:0 0 14px 14px;border-top:none;">
+    <div class="course-top-badge">🎓 DIGITÁLNÍ KURZ · OKAMŽITÝ PŘÍSTUP · VLASTNÍ TEMPO</div>
+    <div class="course-inner">
+
+      <div class="course-eyebrow">📦 Nový produkt · dostupný ihned</div>
+      <div class="course-title">Z B1 na C2:<br><span>Systém který funguje</span></div>
+      <p class="course-desc">
+        Tohle není učebnice. Je to přesný systém — 8 videí — jak se dostat z B1 na C2.
+        Stejnou cestou, jakou to zvládl Honza. Čech. Cambridge C2. Za 3 měsíce.
+      </p>
+
+      <div class="course-pills">
+        <span class="course-pill">8 videí</span>
+        <span class="course-pill">~90 minut</span>
+        <span class="course-pill">5 PDF materiálů</span>
+        <span class="course-pill">doživotní přístup</span>
+      </div>
+
+      <div class="course-what">
+        <div class="course-what-item">Proč 99 % lidí se anglicky nikdy nenaučí — a co dělat místo toho</div>
+        <div class="course-what-item">Jak zmapovat svůj level a nastavit přesný prioritní plán za 20 minut</div>
+        <div class="course-what-item">Denní systém 20–30 minut — konzistence která přináší výsledky</div>
+        <div class="course-what-item">Přestaň překládat v češtině — klíčová technika pro plynulost</div>
+        <div class="course-what-item">Speaking bez studu — deliberate output, filler phrases, mindset</div>
+        <div class="course-what-item">12týdenní roadmap + milníky pokroku + co dál po kurzu</div>
+      </div>
+
+      <div class="course-price-row">
+        <div class="course-price">999 Kč</div>
+        <div class="course-price-sub">/ jednorázově<br>bez dalších plateb</div>
+      </div>
+
+      <a href="https://eezyinglis.gumroad.com/l/zb1nac2" target="_blank" class="btn-course">🎓 &nbsp;ZÍSKAT KURZ TEĎ</a>
+      <div class="course-guarantee">🔒 &nbsp;Bezpečná platba &nbsp;·&nbsp; Doživotní přístup &nbsp;·&nbsp; Okamžitý přístup</div>
+
+    </div>
+  </div>
+</div>
+
 
 <!-- ── PRICING ── -->
 <div class="section-divider" style="margin-top: 32px;">
